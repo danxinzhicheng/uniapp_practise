@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "usingComponents": {
+    "index-list-card": "/components/index/index-list-card"
+  }
+}
