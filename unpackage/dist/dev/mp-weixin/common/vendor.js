@@ -7611,9 +7611,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!***************************************************************!*\
-  !*** C:/Users/Danmo/Documents/HBuilderProjects/糗百/pages.json ***!
-  \***************************************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Danmo/Desktop/mygithub/uniapp_practise/pages.json ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8518,9 +8518,9 @@ module.exports = {"_from":"@dcloudio/uni-stat@alpha","_id":"@dcloudio/uni-stat@2
 
 /***/ }),
 /* 7 */
-/*!********************************************************************************!*\
-  !*** C:/Users/Danmo/Documents/HBuilderProjects/糗百/pages.json?{"type":"style"} ***!
-  \********************************************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Danmo/Desktop/mygithub/uniapp_practise/pages.json?{"type":"style"} ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8529,9 +8529,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 8 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/Danmo/Documents/HBuilderProjects/糗百/pages.json?{"type":"stat"} ***!
-  \*******************************************************************************/
+/*!**********************************************************************************!*\
+  !*** C:/Users/Danmo/Desktop/mygithub/uniapp_practise/pages.json?{"type":"stat"} ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

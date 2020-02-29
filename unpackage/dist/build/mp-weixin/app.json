@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index_r",
+    "pages/fen/Fen",
+    "pages/my/My",
+    "pages/xiaoZhiTiao/Xiaozhitiao"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#CCCCCC",
+    "selectedColor": "FEE42A",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index_r",
+        "iconPath": "/static/icon/index_one.png",
+        "selectedIconPath": "/static/icon/index.png",
+        "text": "糗事"
+      },
+      {
+        "pagePath": "pages/fen/Fen",
+        "iconPath": "/static/icon/fen_one.png",
+        "selectedIconPath": "/static/icon/fen.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/xiaoZhiTiao/Xiaozhitiao",
+        "iconPath": "/static/icon/liao_one.png",
+        "selectedIconPath": "/static/icon/liao.png",
+        "text": "小纸条"
+      },
+      {
+        "pagePath": "pages/my/My",
+        "iconPath": "/static/icon/my_one.png",
+        "selectedIconPath": "/static/icon/my.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}
