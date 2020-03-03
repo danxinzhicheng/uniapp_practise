@@ -1,7 +1,7 @@
 <template>
-	<view class="content">
+	<view class="content" >
 
-		<view class="list_card">
+		<view class="list_card" >
 			<view class="list1">
 
 				<view class="list1-left">
@@ -18,12 +18,12 @@
 			</view>
 
 
-			<view class="list2">
+			<view class="list2" @tap="gotodetail()">
 				{{item.title}}
 			</view>
 
 
-			<view class="list3">
+			<view class="list3" @tap="gotodetail()">
 
 				<image :src="item.titlePic" mode="widthFix" :lazy-load="true"></image>
 				<template v-if="item.type == 'video'">
@@ -145,6 +145,11 @@
 					default:
 						break;
 				}
+			},
+			gotodetail(){
+				uni.showToast({
+					title: '进入详情页'
+				});
 			}
 		}
 	}

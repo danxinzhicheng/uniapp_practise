@@ -1,0 +1,20 @@
+
+.uni-swiper-tab.data-v-71ef5319 {
+	border-bottom: 1rpx solid #EEEEEE;
+}
+.swiper-tab-list.data-v-71ef5319 {
+	color: #969696;
+	font-weight: bold;
+}
+.uni-tab-bar .active.data-v-71ef5319 {
+	color: #343434;
+}
+.active .swipe-tab-line.data-v-71ef5319 {
+	border-bottom: 6rpx solid #FEDE33;
+	border-top: 6rpx solid #FEDE33;
+	width: 70rpx;
+	margin: auto;
+	border-radius: 20rpx;
+}
+
+

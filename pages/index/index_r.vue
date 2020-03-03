@@ -1,30 +1,37 @@
 <template>
 	<view>
 
-		<view class="uni-tab-bar">
+		<view class="uni-tab-bar" animated fadeInLeft>
 
-			<!-- 顶部tabbar 横向滚动scrollview -->
-			<scroll-view class='uni-swiper-tab' scroll-x>
-				<block v-for="(tabitem,index) in tabBars" :key="tabitem.id">
-					<view class="swiper-tab-list" :class="{'active':tabDefIndex==index}" @tap="tabtap(index)">
-						{{tabitem.name}}
-						<view class="swipe-tab-line"></view>
-					</view>
-				</block>
-			</scroll-view>
+			<indexTabbar :tabBars="tabBars" :tabDefIndex="tabDefIndex" @tabtap="tabtap"></indexTabbar>
+
 
 			<!-- swiper类似Android的viewpager或者轮播图 -->
-			<swiper :indicator-dots="false" :autoplay="false" :duration="500" :style="{height:swiperHeight+'px'}"
-			 :current="tabDefIndex" @change="tabChange">
-			 
+			<swiper :indicator-dots="false" :autoplay="false" :duration="500" :style="{height:swiperHeight+'px'}" :current="tabDefIndex"
+			 @change="tabChange">
+
+
 				<swiper-item v-for="(items,index) in newslist" :key="index">
-					<scroll-view scroll-y class="list">
+					<template v-if="items.list.length > 0">
+					 <scroll-view scroll-y class="list" @scrolltolower="loadmore(index)">
+						<!-- 图文列表 -->
 						<block v-for="(item,index1) in items.list" :key="index1">
 							<indexListCard :item='item' :index="index1"></indexListCard>
 						</block>
-					</scroll-view>
+						<!-- 上拉加载 -->
+
+						<loadMore :loadtext="items.loadtext"></loadMore>
+						</scroll-view>
+					</template>
+
+					<template v-else>
+						<noThing></noThing>
+					</template>
+
+
+
 				</swiper-item>
-				
+
 			</swiper>
 		</view>
 
@@ -35,14 +42,21 @@
 
 <script>
 	import indexListCard from '../../components/index/index-list-card.vue';
+	import indexTabbar from '../../components/index/index_tabbar.vue';
+	import loadMore from '../../components/common/loadmore.vue';
+	import noThing from '../../components/common/nothing_view.vue'
 	export default {
 		components: {
-			indexListCard
+			indexListCard,
+			indexTabbar,
+			loadMore,
+			noThing
 		},
 		data() {
 			return {
+
 				swiperHeight: 500,
-				tabDefIndex: 1,
+				tabDefIndex: 0,
 				tabBars: [{
 						name: "关注",
 						id: "guanzhu"
@@ -72,6 +86,7 @@
 				newslist: [
 
 					{
+						loadtext: "上拉加载更多...",
 						list: [{
 								pic: '../../static/demo/userpic/12.jpg',
 								name: '昵称',
@@ -143,6 +158,7 @@
 							}
 						]
 					}, {
+						loadtext: "上拉加载更多...",
 						list: [{
 							pic: '../../static/demo/userpic/12.jpg',
 							name: '昵称',
@@ -162,16 +178,22 @@
 
 						}]
 					}, {
+						loadtext: "上拉加载更多...",
 						list: []
 					}, {
+						loadtext: "上拉加载更多...",
 						list: []
 					}, {
+						loadtext: "上拉加载更多...",
 						list: []
 					}, {
+						loadtext: "上拉加载更多...",
 						list: []
 					}
 				],
+				loadmoreNum: 520, //临时变量
 			}
+
 		},
 
 		onLoad() {
@@ -185,6 +207,36 @@
 			})
 		},
 		methods: {
+			loadmore(index) {
+				if (this.newslist[index].loadtext != "上拉加载更多...")
+					return;
+				this.newslist[index].loadtext == "加载中...";
+				setTimeout(() => {
+					let obj = {
+
+						pic: '../../static/demo/userpic/12.jpg',
+						name: '昵称666',
+						isGuanZhu: false,
+						title: '我是标题666',
+						titlePic: '../../static/demo/datapic/1.jpg',
+						type: 'img', //img图文 video视屏
+						paly: '20w',
+						lang: '02:17',
+						infonum: {
+							index: 0, //0 为没有操作 1为顶加1 2为踩一下
+							ding: 10,
+							cai: 10
+						},
+						ping: 34,
+						share: 17
+					}
+
+					obj.title = "我是标题666" + (this.loadmoreNum++);
+					//追加数据
+					this.newslist[index].list.push(obj);
+				}, 1000);
+
+			},
 			//tab点击事件
 			tabtap(index) {
 				this.tabDefIndex = index;
@@ -198,24 +250,5 @@
 </script>
 
 <style>
-	.swiper-tab-list {
-		color: #969696;
-		font-weight: bold;
-	}
 
-	.uni-tab-bar .active {
-		color: #343434;
-	}
-
-	.active .swipe-tab-line {
-		border-bottom: 6rpx solid #FEDE33;
-		border-top: 6rpx solid #FEDE33;
-		width: 70rpx;
-		margin: auto;
-		border-radius: 20rpx;
-	}
-
-	.uni-swiper-tab {
-		border-bottom: 1rpx solid #EEEEEE;
-	}
 </style>
