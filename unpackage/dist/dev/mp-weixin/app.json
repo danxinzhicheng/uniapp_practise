@@ -3,7 +3,7 @@
     "pages/index/index_r",
     "pages/fen/Fen",
     "pages/my/My",
-    "pages/xiaoZhiTiao/Xiaozhitiao"
+    "pages/xiaoZhiTiao/Xiaozhitiao_r"
   ],
   "subPackages": [],
   "window": {
@@ -31,7 +31,7 @@
         "text": "动态"
       },
       {
-        "pagePath": "pages/xiaoZhiTiao/Xiaozhitiao",
+        "pagePath": "pages/xiaoZhiTiao/Xiaozhitiao_r",
         "iconPath": "/static/icon/liao_one.png",
         "selectedIconPath": "/static/icon/liao.png",
         "text": "小纸条"
@@ -44,6 +44,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap90.json"
+  "usingComponents": {}
 }

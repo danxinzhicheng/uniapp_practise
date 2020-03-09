@@ -1,6 +1,9 @@
 {
-  "navigationBarTitleText": "uni-app",
+  "navigationBarTitleText": "首页",
   "usingComponents": {
-    "index-list-card": "/components/index/index-list-card"
+    "index-list-card": "/components/index/index-list-card",
+    "index-tabbar": "/components/index/index_tabbar",
+    "load-more": "/components/common/loadmore",
+    "no-thing": "/components/common/nothing_view"
   }
 }

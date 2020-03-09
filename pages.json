@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index_r",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
 			}
 		},
 		{
@@ -13,7 +13,11 @@
 			"path": "pages/my/My"
 		},
 		{
-			"path": "pages/xiaoZhiTiao/Xiaozhitiao"
+			"path": "pages/xiaoZhiTiao/Xiaozhitiao_r",
+			"style":{
+				"navigationBarTitleText":"小纸条",
+				"enablePullDownRefresh":true//下拉刷新
+			}
 		}
     ],
 	"globalStyle": {
@@ -42,7 +46,7 @@
 			"text":"动态"
 		},
 		{
-			"pagePath":"pages/xiaoZhiTiao/Xiaozhitiao",
+			"pagePath":"pages/xiaoZhiTiao/Xiaozhitiao_r",
 			"iconPath":"/static/icon/liao_one.png",
 			"selectedIconPath":"/static/icon/liao.png",
 			"text":"小纸条"
