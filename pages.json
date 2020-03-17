@@ -19,6 +19,10 @@
 				"enablePullDownRefresh":true//下拉刷新
 			}
 		}
+        ,{
+            "path" : "pages/my/my_r",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -52,7 +56,7 @@
 			"text":"小纸条"
 		},
 		{
-			"pagePath":"pages/my/My",
+			"pagePath":"pages/my/my_r",
 			"iconPath":"/static/icon/my_one.png",
 			"selectedIconPath":"/static/icon/my.png",
 			"text":"我的"
